@@ -334,10 +334,19 @@ header {
   color: var(--text-color);
 }
 
+.form-icon {
+  position: absolute;
+  left: 12px;
+  transform: translateY(50%);
+  width: 18px;
+  height: 18px;
+  fill: violet;
+}
+
 .form-input {
   width: 100%;
   height: 40px;
-  padding: 0;
+  padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
