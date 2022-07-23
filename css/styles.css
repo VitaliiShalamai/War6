@@ -340,15 +340,24 @@ header {
   transform: translateY(50%);
   width: 18px;
   height: 18px;
-  fill: violet;
+  fill: var(--main-color);
+}
+
+.form-field:focus-within > .form-icon {
+  fill: var(--accent-color);
 }
 
 .form-input {
   width: 100%;
   height: 40px;
   padding-left: 42px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
 
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  border: 1px solid;
+  border-color: rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 
@@ -357,8 +366,14 @@ textarea {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.form-input:focus,
+textarea:focus {
+  border-color: var(--accent-color);
 }
 
 .form-checkbox {
@@ -368,7 +383,19 @@ textarea {
 }
 
 .checkbox {
+  position: absolute;
+  left: 0;
+  appearance: none;
+}
+
+.checkbox-icon {
+  display: block;
+  width: 16px;
+  height: 15px;
   margin-right: 8px;
+  cursor: pointer;
+  background-color: red;
+  color: greenyellow;
 }
 
 .form-agreement {
@@ -379,6 +406,20 @@ textarea {
 }
 
 .form-link {
+  position: relative;
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+.form-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+
+  width: 100%;
+  height: 1px;
+  background: var(--accent-color);
 }
 
 .form-btn {
