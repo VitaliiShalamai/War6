@@ -705,7 +705,8 @@ textarea:focus {
   margin-left: 70px;
 }
 
-.footer-title {
+.footer-title,
+.subscribe-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -717,6 +718,50 @@ textarea:focus {
 
 .footer-link {
   fill: var(--filter-color);
+}
+
+/* SUBSCRIBE */
+
+.subscribe {
+  margin-left: 93px;
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.subscribe-field {
+  margin-right: 12px;
+}
+
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  color: var(--title-color);
+  background: transparent;
+
+  outline: none;
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  fill: var(--title-color);
+}
+
+.subscribe-btn:hover {
+  fill: var(--accent-color);
+}
+
+.subscribe-icon {
+  margin-left: 10px;
 }
 
 /* PORTFOLIO */
